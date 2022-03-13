@@ -1,41 +1,47 @@
-[
-  {
-    "title": "Test Title",
-    "text": "Test text",
-    "id": "001"
-  },
-  {
-    "title": "Test 1",
-    "text": "Test 1",
-    "id": "002"
-  },
-  {
-    "title": "Test 2",
-    "text": "Test 2",
-    "id": "003"
-  },
-  {
-    "title": "uygy",
-    "text": "ytfifv"
-  },
-  {
-    "title": "dfs",
-    "text": "SGD"
-  },
-  {
-    "title": "rew",
-    "text": "qewrt"
-  },
-  {
-    "title": "SERF",
-    "text": "ASDFG"
-  },
-  {
-    "title": "gafd",
-    "text": "adfg"
-  },
-  {
-    "title": "asdg",
-    "text": "asdg"
-  }
-]
+{
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "001"
+    },
+    {
+      "title": "Test 1",
+      "text": "Test 1",
+      "id": "002"
+    },
+    {
+      "title": "Test 2",
+      "text": "Test 2",
+      "id": "003"
+    },
+    {
+      "title": "uygy",
+      "text": "ytfifv"
+    },
+    {
+      "title": "dfs",
+      "text": "SGD"
+    },
+    {
+      "title": "rew",
+      "text": "qewrt"
+    },
+    {
+      "title": "SERF",
+      "text": "ASDFG"
+    },
+    {
+      "title": "gafd",
+      "text": "adfg"
+    },
+    {
+      "title": "asdg",
+      "text": "asdg"
+    },
+    {
+      "title": "aSTF",
+      "text": "DGSF"
+    }
+  ]
+}

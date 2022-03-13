@@ -121,13 +121,13 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async notes => {
-  let tempArr = await notes.json();
-  let { tempVar } = tempArr;
+  // let jsonData = await notes.json();
+  // let { tempVar } = tempArr;
   
-  let jsonNotes = tempVar;
+  // let jsonNotes = tempVar;
 
 
-  // let jsonNotes = await notes.json();
+  let jsonNotes = await notes.json();
   console.log(jsonNotes);
   let  notesArray = jsonNotes;
   console.log(JSON.stringify(notesArray));
