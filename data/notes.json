@@ -1,47 +1,22 @@
-{
-  "notes": [
-    {
-      "title": "Test Title",
-      "text": "Test text",
-      "id": "001"
-    },
-    {
-      "title": "Test 1",
-      "text": "Test 1",
-      "id": "002"
-    },
-    {
-      "title": "Test 2",
-      "text": "Test 2",
-      "id": "003"
-    },
-    {
-      "title": "uygy",
-      "text": "ytfifv"
-    },
-    {
-      "title": "dfs",
-      "text": "SGD"
-    },
-    {
-      "title": "rew",
-      "text": "qewrt"
-    },
-    {
-      "title": "SERF",
-      "text": "ASDFG"
-    },
-    {
-      "title": "gafd",
-      "text": "adfg"
-    },
-    {
-      "title": "asdg",
-      "text": "asdg"
-    },
-    {
-      "title": "aSTF",
-      "text": "DGSF"
-    }
-  ]
-}
+[
+  {
+    "title": "Yes",
+    "text": "r",
+    "id": "1e495f5c-3dd1-4613-8298-2522a6009c47"
+  },
+  {
+    "title": "it",
+    "text": "i",
+    "id": "29cced37-c8f5-40c7-a381-2483e95902e0"
+  },
+  {
+    "title": "works",
+    "text": "w",
+    "id": "60711474-b7a1-4dd4-8528-a0b96582c4ca"
+  },
+  {
+    "title": "asdghadretby!!!!!",
+    "text": "!",
+    "id": "86dfd25b-baba-401b-8e0b-a7c4b0a5213d"
+  }
+]
