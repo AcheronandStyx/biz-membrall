@@ -1,3 +1,5 @@
+// var uniqid = require('uniqid');  // UUID generator
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -70,6 +72,7 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value
+    //id: uniqid()
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
@@ -118,6 +121,7 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async notes => {
+  // let { notesArray } = await notes.json();
   let jsonNotes = await notes.json();
   if (window.location.pathname === '/notes') {
     noteList.forEach(el => (el.innerHTML = ''));
