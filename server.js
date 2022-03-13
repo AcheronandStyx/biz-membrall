@@ -36,13 +36,11 @@ app.get('/api/notes', (req, res) => {
     // read the JSON file 
     fs.readFile('./data/notes.json', 'utf8', (error, response) => {
         if (error) throw error;
-
         //Parse the data
         //console.log(response);
         console.log(uniqid())
-
         // console.log(JSON.parse(response));
-
+        // console.log(res.json(JSON.parse(response)))
         //send it back to the html page 
         res.json(JSON.parse(response));
         /*
@@ -52,18 +50,14 @@ app.get('/api/notes', (req, res) => {
         fitler for the id value, then delete that value.
         */
     })
-
 });
 
 app.post('/api/notes', (req, res) => {
-
     notesArray = notes;
-    // LOOK INTO NPM MOUDLES TO ENSURE A UNIQUE ID IS USED, .LENGTH DOESN"T WORK BECAUSE TEH USER CAN DELETE FROM THE MIDDLE, then add on eproducing a dup id
     // console.log(notesArray);
     // console.log(req.body);
     const note = createNewNote(req.body, notesArray); // Send the user entered note and notes.json
     res.json(note);
-
 });
 
 // route to the notes page
