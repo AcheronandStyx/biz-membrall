@@ -14,34 +14,38 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(urlencoded({ extended: true }));
 app.use(express.static('public')); // make the public folder available everywhere
+/*
+change the forEach in renderNotes to jsonNotes.notes.forEach
+stringify the array before it is written in createNew Note
+console.log(JSON.stringify(notesArray)); THIS PRINTED JUST THE ARRAY
+*/
 
+function createNewNote(body, notesArray) {
 
-function createNewNote (body, notesArray) {
-    
-    const note = body; 
+    const note = body;
     notesArray.push(note);
-    
+
     console.log(notesArray);
     // console.log('test\n')
-    console.log(JSON.stringify({ notes: notesArray }, null, 2))
+    console.log(JSON.stringify( notesArray ))
 
     fs.writeFileSync(
         path.join(__dirname, './data/notes.json'),
-        JSON.stringify({ notes: notesArray }, null, 2)
+        JSON.stringify( notesArray, null, 2 )
     );
     return note;
 }
 
 app.get('/api/notes', (req, res) => {
+
+    
     // read the JSON file 
     fs.readFile('./data/notes.json', 'utf8', (error, response) => {
         if (error) throw error;
         //Parse the data
-        //console.log(response);
-        console.log(uniqid())
-        // console.log(JSON.parse(response));
-        // console.log(res.json(JSON.parse(response)))
-        //send it back to the html page 
+        //send it back to the html page
+
+        // console.log(JSON.parse(response)); // JUST AN ARRAY HERe
         res.json(JSON.parse(response));
         /*
         array.filter to selcet an bject and delete it
@@ -53,10 +57,11 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-    notesArray = notes;
+    console.log(notes);
+    // LOOK INTO NPM MOUDLES TO ENSURE A UNIQUE ID IS USED, .LENGTH DOESN"T WORK BECAUSE TEH USER CAN DELETE FROM THE MIDDLE, then add on eproducing a dup id
     // console.log(notesArray);
     // console.log(req.body);
-    const note = createNewNote(req.body, notesArray); // Send the user entered note and notes.json
+    const note = createNewNote(req.body, notes); // Send the user entered note and notes.json
     res.json(note);
 });
 

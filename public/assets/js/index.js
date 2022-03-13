@@ -128,7 +128,7 @@ const renderNoteList = async notes => {
 
 
   let jsonNotes = await notes.json();
-  console.log(jsonNotes);
+  //console.log(jsonNotes);
   let  notesArray = jsonNotes;
   console.log(JSON.stringify(notesArray));
   if (window.location.pathname === '/notes') {
