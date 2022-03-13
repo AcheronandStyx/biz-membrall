@@ -1,4 +1,3 @@
-// var uniqid = require('uniqid');  // UUID generator
 
 let noteTitle;
 let noteText;
@@ -71,8 +70,8 @@ const renderActiveNote = () => {
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
-    text: noteText.value
-    //id: uniqid()
+    text: noteText.value,
+    // id: uniqid()
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
