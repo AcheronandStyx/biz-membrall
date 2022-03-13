@@ -35,7 +35,7 @@ const getNotes = () =>
     }
   });
 
-const saveNote = note =>
+const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
     headers: {
@@ -44,7 +44,7 @@ const saveNote = note =>
     body: JSON.stringify(note)
   });
 
-const deleteNote = id =>
+const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
@@ -121,8 +121,16 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async notes => {
-  // let { notesArray } = await notes.json();
-  let jsonNotes = await notes.json();
+  let tempArr = await notes.json();
+  let { tempVar } = tempArr;
+  
+  let jsonNotes = tempVar;
+
+
+  // let jsonNotes = await notes.json();
+  console.log(jsonNotes);
+  let  notesArray = jsonNotes;
+  console.log(JSON.stringify(notesArray));
   if (window.location.pathname === '/notes') {
     noteList.forEach(el => (el.innerHTML = ''));
   }
